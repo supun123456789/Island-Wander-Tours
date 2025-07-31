@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Island Wander Tours - Sri Lanka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function openWhatsApp() {
+      window.open("https://wa.me/94763600611", "_blank");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Slideshow -->
+  <div class="slideshow">
+    <img class="slide" src="images/elephants.jpg" alt="Sri Lanka Elephants">
+    <img class="slide" src="images/sigiriya.jpg" alt="Sigiriya Rock Fortress">
+    <img class="slide" src="images/leopard.jpg" alt="Sri Lanka Leopard">
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#tours">Tours</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#contact">Contact</a>
+    <button onclick="openWhatsApp()" class="whatsapp-btn">Chat on WhatsApp</button>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+    <h2>Welcome to Island Wander Tours</h2>
+    <p>Explore the best of Sri Lanka with unforgettable tours and adventures!</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a passionate travel agency based in Sri Lanka, offering handpicked experiences including wildlife safaris, heritage sites, and beach holidays.</p>
+  </section>
+
+  <section id="tours">
+    <h2>Popular Tours</h2>
+    <ul>
+      <li>Sigiriya & Dambulla Day Tour</li>
+      <li>Yala Safari & Leopard Watching</li>
+      <li>Hill Country Train Journey</li>
+    </ul>
+  </section>
+
+  <!-- New: Famous Tourist Destinations -->
+  <section id="destinations">
+    <h2>Famous Tourist Destinations in Sri Lanka</h2>
+
+    <div class="destination">
+      <img src="images/sigiriya.jpg" alt="Sigiriya">
+      <h3>Sigiriya Rock Fortress</h3>
+      <p><strong>Location:</strong> Matale District</p>
+      <p><strong>Importance:</strong> UNESCO World Heritage Site</p>
+      <p><strong>Details:</strong> Known as the "Lion Rock", Sigiriya is an ancient rock fortress with frescoes, landscaped gardens, and a royal palace on top.</p>
+    </div>
+
+    <div class="destination">
+      <img src="images/yala.jpg" alt="Yala National Park">
+      <h3>Yala National Park</h3>
+      <p><strong>Location:</strong> Southern Province</p>
+      <p><strong>Importance:</strong> Best place to spot leopards</p>
+      <p><strong>Details:</strong> Home to elephants, leopards, and exotic birds. Offers thrilling safaris and a chance to explore Sri Lanka's wildlife.</p>
+    </div>
+
+    <div class="destination">
+      <img src="images/ella.jpg" alt="Ella">
+      <h3>Ella</h3>
+      <p><strong>Location:</strong> Badulla District</p>
+      <p><strong>Importance:</strong> Scenic hill country</p>
+      <p><strong>Details:</strong> Famous for its natural beauty, Nine Arch Bridge, and train rides through lush green hills.</p>
+    </div>
+
+    <div class="destination">
+      <img src="images/galle-fort.jpg" alt="Galle Fort">
+      <h3>Galle Fort</h3>
+      <p><strong>Location:</strong> Southern Province</p>
+      <p><strong>Importance:</strong> Colonial Dutch Fort</p>
+      <p><strong>Details:</strong> UNESCO site with colonial architecture, cafes, boutiques, and stunning ocean views.</p>
+    </div>
+
+    <div class="destination">
+      <img src="images/nuwara-eliya.jpg" alt="Nuwara Eliya">
+      <h3>Nuwara Eliya</h3>
+      <p><strong>Location:</strong> Central Province</p>
+      <p><strong>Importance:</strong> “Little England”</p>
+      <p><strong>Details:</strong> Tea plantations, cool climate, colonial bungalows, and Gregory Lake make this a unique hill country escape.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="contact.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Call / WhatsApp: <strong>+94 76 360 0611</strong></p>
+  </section>
+
+  <!-- Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    showSlides();
+  </script>
+
+  <!-- Zoho SalesIQ -->
+  <script type='text/javascript'>
+    var $zoho=$zoho || {};
+    $zoho.salesiq = $zoho.salesiq || {
+      widgetcode:"YOUR_UNIQUE_WIDGET_CODE_HERE",
+      values:{}, ready:function(){}
+    };
+    var d=document;
+    s=d.createElement("script");
+    s.type="text/javascript";
+    s.id="zsiqscript";
+    s.defer=true;
+    s.src="https://salesiq.zoho.com/widget";
+    t=d.getElementsByTagName("script")[0];
+    t.parentNode.insertBefore(s,t);
+  </script>
+
+</body>
+</html>
