@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>ceylon Wonder Tours - Sri Lanka</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
   <style>
     .chat-widget {
       position: fixed;
@@ -18,12 +18,10 @@
       z-index: 9999;
       transition: opacity 0.3s ease;
     }
-
     .chat-widget[style*="display: none"] {
       opacity: 0;
       pointer-events: none;
     }
-
     .chat-header {
       background: #007bff;
       color: white;
@@ -34,7 +32,6 @@
       align-items: center;
       gap: 10px;
     }
-
     .chat-toggle {
       position: fixed;
       bottom: 20px;
@@ -48,36 +45,30 @@
       box-shadow: 0 0 8px rgba(0,0,0,0.3);
       background: white;
     }
-
     .chat-toggle img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .chat-header img {
       width: 30px;
       height: 30px;
       border-radius: 50%;
     }
-
     .chat-body {
       padding: 15px;
       font-size: 14px;
     }
-
     .chat-footer {
       padding: 10px;
       border-top: 1px solid #ddd;
     }
-
     .chat-footer input {
       width: 100%;
       padding: 8px;
       border-radius: 5px;
       border: 1px solid #ccc;
     }
-
     .destination img {
       max-width: 100%;
       border-radius: 10px;
@@ -88,10 +79,10 @@
 
   <!-- Slideshow -->
   <div class="slideshow">
-    <img class="slide" src="elephants.jpg" alt="Sri Lanka Elephants">
-    <img class="slide" src="sigiriya.jpg" alt="Sigiriya Rock Fortress">
-    <img class="slide" src="leopard.jpg" alt="Sri Lanka Leopard">
-    <img class="slide" src="ella.jpg" alt="ella">
+    <img class="slide" src="elephants.jpg" alt="Sri Lanka Elephants" />
+    <img class="slide" src="sigiriya.jpg" alt="Sigiriya Rock Fortress" />
+    <img class="slide" src="leopard.jpg" alt="Sri Lanka Leopard" />
+    <img class="slide" src="ella.jpg" alt="ella" />
   </div>
 
   <!-- Navigation -->
@@ -124,12 +115,12 @@
     </ul>
   </section>
 
-  <!-- New: Famous Tourist Destinations -->
+  <!-- Famous Tourist Destinations -->
   <section id="destinations">
     <h2>Famous Tourist Destinations in Sri Lanka</h2>
 
     <div class="destination">
-      <img src="sigiriya.jpg" alt="Sigiriya">
+      <img src="sigiriya.jpg" alt="Sigiriya" />
       <h3>Sigiriya Rock Fortress</h3>
       <p><strong>Location:</strong> Matale District</p>
       <p><strong>Importance:</strong> UNESCO World Heritage Site</p>
@@ -138,7 +129,7 @@
     </div>
 
     <div class="destination">
-      <img src="leopard.jpg" alt="Yala National Park">
+      <img src="leopard.jpg" alt="Yala National Park" />
       <h3>Yala National Park</h3>
       <p><strong>Location:</strong> Southern Province</p>
       <p><strong>Importance:</strong> Best place to spot leopards</p>
@@ -147,7 +138,7 @@
     </div>
 
     <div class="destination">
-      <img src="ella.jpg" alt="Ella">
+      <img src="ella.jpg" alt="Ella" />
       <h3>Ella</h3>
       <p><strong>Location:</strong> Badulla District</p>
       <p><strong>Importance:</strong> Scenic hill country</p>
@@ -156,7 +147,7 @@
     </div>
 
     <div class="destination">
-      <img src="galle-fort.jpg" alt="Galle Fort">
+      <img src="galle-fort.jpg" alt="Galle Fort" />
       <h3>Galle Fort</h3>
       <p><strong>Location:</strong> Southern Province</p>
       <p><strong>Importance:</strong> Colonial Dutch Fort</p>
@@ -165,7 +156,7 @@
     </div>
 
     <div class="destination">
-      <img src="nuwara-eliya.jpg" alt="Nuwara Eliya">
+      <img src="nuwara-eliya.jpg" alt="Nuwara Eliya" />
       <h3>Nuwara Eliya</h3>
       <p><strong>Location:</strong> Central Province</p>
       <p><strong>Importance:</strong> “Little England”</p>
@@ -174,7 +165,7 @@
     </div>
 
     <div class="destination">
-      <img src="anuradhapura.jpg" alt="Anuradhapura">
+      <img src="anuradhapura.jpg" alt="Anuradhapura" />
       <h3>Anuradhapura</h3>
       <p><strong>Location:</strong> North Central Province</p>
       <p><strong>Importance:</strong> Ancient capital of Sri Lanka</p>
@@ -183,22 +174,21 @@
     </div>
 
     <div class="destination">
-      <img src="mirissa.jpg" alt="Mirissa Beach">
+      <img src="mirissa.jpg" alt="Mirissa Beach" />
       <h3>Mirissa</h3>
       <p><strong>Location:</strong> Southern Coast</p>
       <p><strong>Importance:</strong> Beach paradise and whale watching</p>
       <p><strong>Details:</strong> Perfect tropical destination for surfing, whale watching and beach bars with golden sands and turquoise waters.</p>
       <a href="mirissa.html"><button>Read More</button></a>
     </div>
-
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
     <form action="contact.php" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required><br>
-      <input type="email" name="email" placeholder="Your Email" required><br>
-      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <input type="text" name="name" placeholder="Your Name" required /><br />
+      <input type="email" name="email" placeholder="Your Email" required /><br />
+      <textarea name="message" placeholder="Your Message" required></textarea><br />
       <button type="submit">Send Message</button>
     </form>
     <p>Call / WhatsApp: <strong>+94 76 360 0611</strong></p>
@@ -222,124 +212,83 @@
     function openWhatsApp() {
       window.open("https://wa.me/94763600611", "_blank");
     }
-
-    // Chat Scroll and Toggle Logic
-    const chatBox = document.getElementById("chatBox");
-    let lastScrollTop = 0;
-    let manuallyToggled = false;
-
-    window.addEventListener("scroll", () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-      if (!manuallyToggled) {
-        if (scrollTop > lastScrollTop) {
-          chatBox.style.display = "none"; // Hide on scroll down
-        } else {
-          chatBox.style.display = "block"; // Show on scroll up
-        }
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
-
-    function toggleChat() {
-      if (chatBox.style.display === "none" || chatBox.style.display === "") {
-        chatBox.style.display = "block";
-        manuallyToggled = true;
-      } else {
-        chatBox.style.display = "none";
-        manuallyToggled = false;
-      }
-    }
   </script>
 
   <!-- Zoho SalesIQ -->
-  <script type='text/javascript'>
-    var $zoho=$zoho || {};
+  <script type="text/javascript">
+    var $zoho = $zoho || {};
     $zoho.salesiq = $zoho.salesiq || {
-      widgetcode:"YOUR_UNIQUE_WIDGET_CODE_HERE",
-      values:{}, ready:function(){}
+      widgetcode: "YOUR_UNIQUE_WIDGET_CODE_HERE",
+      values: {},
+      ready: function () {},
     };
-    var d=document;
-    s=d.createElement("script");
-    s.type="text/javascript";
-    s.id="zsiqscript";
-    s.defer=true;
-    s.src="https://salesiq.zoho.com/widget";
-    t=d.getElementsByTagName("script")[0];
-    t.parentNode.insertBefore(s,t);
+    var d = document;
+    var s = d.createElement("script");
+    s.type = "text/javascript";
+    s.id = "zsiqscript";
+    s.defer = true;
+    s.src = "https://salesiq.zoho.com/widget";
+    var t = d.getElementsByTagName("script")[0];
+    t.parentNode.insertBefore(s, t);
   </script>
-    <script>
-  const chatBox = document.getElementById("chatBox");
-  const chatToggle = document.querySelector(".chat-toggle");
 
-  let lastScrollY = window.scrollY;
-  let chatManuallyToggled = false;
-
-  // Auto-minimize chat after 5 seconds
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      chatBox.style.display = "none";
-    }, 5000);
-  });
-
-  // Toggle chat box by clicking the icon
-  function toggleChat() {
-    if (chatBox.style.display === "none" || chatBox.style.display === "") {
-      chatBox.style.display = "block";
-      chatManuallyToggled = true;
-    } else {
-      chatBox.style.display = "none";
-      chatManuallyToggled = false;
-    }
-  }
-
-  // Scroll up = show chat, Scroll down = hide chat
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-
-    if (!chatManuallyToggled) {
-      if (currentScrollY > lastScrollY) {
-        // Scrolling down
-        chatBox.style.display = "none";
-      } else {
-        // Scrolling up
-        chatBox.style.display = "block";
-      }
-    }
-
-    lastScrollY = currentScrollY;
-  });
-
-  // Attach toggle to icon click
-  chatToggle.addEventListener("click", toggleChat);
-</script>
-
-  <!-- Floating Chat Toggle -->
-  <div class="chat-toggle" onclick="toggleChat()">
-    <img src="paris.jpg" alt="Chat Icon">
+  <!-- Chat Toggle Button -->
+  <div class="chat-toggle" id="chatToggle">
+    <img src="paris.jpg" alt="Chat Icon" />
   </div>
 
-  <!-- Hidden Chat Widget -->
+  <!-- Chat Widget -->
   <div class="chat-widget" id="chatBox" style="display: none;">
     <div class="chat-header">
-      <img src="paris.jpg" alt="Paris">
+      <img src="paris.jpg" alt="Paris" />
       <strong>Paris</strong>
     </div>
-    <div class="chat-toggle">
-      <img src="images/paris.png" alt="Open Chat">
-    </div>
-    <div class="chat-widget" id="chatBox">
-      <!-- Chat iframe or embed code here -->
-    </div>
-
     <div class="chat-body">
-      Hello from Olanka! Do you need help planning your holiday?<br>We are 24/7 available to assist you.
+      Hello from ceylon Wonder Tours! Do you need help planning your holiday?<br />
+      We are 24/7 available to assist you.
     </div>
     <div class="chat-footer">
       <input type="text" placeholder="Type your message and hit 'Enter'" />
     </div>
   </div>
 
+  <!-- Chat Script -->
+  <script>
+    const chatBox = document.getElementById("chatBox");
+    const chatToggle = document.getElementById("chatToggle");
+    let lastScrollY = window.scrollY;
+    let chatManuallyToggled = false;
+
+    // Auto-hide chat after 5 seconds on load
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        chatBox.style.display = "none";
+      }, 5000);
+    });
+
+    // Toggle chat manually
+    chatToggle.addEventListener("click", () => {
+      if (chatBox.style.display === "none" || chatBox.style.display === "") {
+        chatBox.style.display = "block";
+        chatManuallyToggled = true;
+      } else {
+        chatBox.style.display = "none";
+        chatManuallyToggled = false;
+      }
+    });
+
+    // Hide on scroll down, show on scroll up
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+      if (!chatManuallyToggled) {
+        if (currentScrollY > lastScrollY) {
+          chatBox.style.display = "none";
+        } else {
+          chatBox.style.display = "block";
+        }
+      }
+      lastScrollY = currentScrollY;
+    });
+  </script>
 </body>
 </html>
