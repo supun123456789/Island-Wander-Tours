@@ -16,6 +16,12 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       font-family: sans-serif;
       z-index: 9999;
+      transition: opacity 0.3s ease;
+    }
+
+    .chat-widget[style*="display: none"] {
+      opacity: 0;
+      pointer-events: none;
     }
 
     .chat-header {
@@ -27,6 +33,26 @@
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+
+    .chat-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 10000;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 60px;
+      height: 60px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+      background: white;
+    }
+
+    .chat-toggle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .chat-header img {
@@ -192,6 +218,39 @@
       setTimeout(showSlides, 3000);
     }
     showSlides();
+
+    function openWhatsApp() {
+      window.open("https://wa.me/94763600611", "_blank");
+    }
+
+    // Chat Scroll and Toggle Logic
+    const chatBox = document.getElementById("chatBox");
+    let lastScrollTop = 0;
+    let manuallyToggled = false;
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (!manuallyToggled) {
+        if (scrollTop > lastScrollTop) {
+          chatBox.style.display = "none"; // Hide on scroll down
+        } else {
+          chatBox.style.display = "block"; // Show on scroll up
+        }
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    function toggleChat() {
+      if (chatBox.style.display === "none" || chatBox.style.display === "") {
+        chatBox.style.display = "block";
+        manuallyToggled = true;
+      } else {
+        chatBox.style.display = "none";
+        manuallyToggled = false;
+      }
+    }
   </script>
 
   <!-- Zoho SalesIQ -->
@@ -210,14 +269,72 @@
     t=d.getElementsByTagName("script")[0];
     t.parentNode.insertBefore(s,t);
   </script>
+    <script>
+      const chatBox = document.getElementById("chatBox");
+      const chatToggle = document.querySelector(".chat-toggle");
 
-  <div class="chat-widget">
+      let lastScrollY = window.scrollY;
+      let chatManuallyToggled = false;
+
+      // Initial auto-minimize after 5 seconds
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          chatBox.style.display = "none";
+        }, 5000);
+      });
+
+      // Scroll-based hide/show
+      window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+
+        if (!chatManuallyToggled) {
+          if (currentScrollY > lastScrollY) {
+            // Scrolling down
+            chatBox.style.display = "none";
+          } else {
+            // Scrolling up
+            chatBox.style.display = "block";
+          }
+        }
+ 
+        lastScrollY = currentScrollY;
+      });
+
+      // Toggle chat on image/icon click
+      function toggleChat() {
+         if (chatBox.style.display === "none" || chatBox.style.display === "") {
+          chatBox.style.display = "block";
+          chatManuallyToggled = true;
+        } else {
+          chatBox.style.display = "none";
+          chatManuallyToggled = false;
+        }
+      }
+
+      // Attach click listener to image icon
+      chatToggle.addEventListener("click", toggleChat);
+    </script>
+
+  <!-- Floating Chat Toggle -->
+  <div class="chat-toggle" onclick="toggleChat()">
+    <img src="paris.jpg" alt="Chat Icon">
+  </div>
+
+  <!-- Hidden Chat Widget -->
+  <div class="chat-widget" id="chatBox" style="display: none;">
     <div class="chat-header">
       <img src="paris.jpg" alt="Paris">
-      <strong>Welcome</strong>
+      <strong>Paris</strong>
     </div>
+    <div class="chat-toggle">
+      <img src="images/paris.png" alt="Open Chat">
+    </div>
+    <div class="chat-widget" id="chatBox">
+      <!-- Chat iframe or embed code here -->
+    </div>
+
     <div class="chat-body">
-      Hello from Ceylon Wonder Toure! Do you need help planning your holiday?<br>We are 24/7 available to assist you.
+      Hello from Olanka! Do you need help planning your holiday?<br>We are 24/7 available to assist you.
     </div>
     <div class="chat-footer">
       <input type="text" placeholder="Type your message and hit 'Enter'" />
@@ -225,4 +342,4 @@
   </div>
 
 </body>
-</html> 
+</html>
