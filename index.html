@@ -5,11 +5,58 @@
   <title>ceylon Wonder Tours - Sri Lanka</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script>
-    function openWhatsApp() {
-      window.open("https://wa.me/94763600611", "_blank");
+  <style>
+    .chat-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      font-family: sans-serif;
+      z-index: 9999;
     }
-  </script>
+
+    .chat-header {
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chat-header img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .chat-body {
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .chat-footer {
+      padding: 10px;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-footer input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .destination img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
@@ -61,6 +108,7 @@
       <p><strong>Location:</strong> Matale District</p>
       <p><strong>Importance:</strong> UNESCO World Heritage Site</p>
       <p><strong>Details:</strong> Known as the "Lion Rock", Sigiriya is an ancient rock fortress with frescoes, landscaped gardens, and a royal palace on top.</p>
+      <a href="sigiriya.html"><button>Read More</button></a>
     </div>
 
     <div class="destination">
@@ -69,6 +117,7 @@
       <p><strong>Location:</strong> Southern Province</p>
       <p><strong>Importance:</strong> Best place to spot leopards</p>
       <p><strong>Details:</strong> Home to elephants, leopards, and exotic birds. Offers thrilling safaris and a chance to explore Sri Lanka's wildlife.</p>
+      <a href="Yala.html"><button>Read More</button></a>
     </div>
 
     <div class="destination">
@@ -77,6 +126,7 @@
       <p><strong>Location:</strong> Badulla District</p>
       <p><strong>Importance:</strong> Scenic hill country</p>
       <p><strong>Details:</strong> Famous for its natural beauty, Nine Arch Bridge, and train rides through lush green hills.</p>
+      <a href="ella.html"><button>Read More</button></a>
     </div>
 
     <div class="destination">
@@ -85,6 +135,7 @@
       <p><strong>Location:</strong> Southern Province</p>
       <p><strong>Importance:</strong> Colonial Dutch Fort</p>
       <p><strong>Details:</strong> UNESCO site with colonial architecture, cafes, boutiques, and stunning ocean views.</p>
+      <a href="gallefort.html"><button>Read More</button></a>
     </div>
 
     <div class="destination">
@@ -93,7 +144,27 @@
       <p><strong>Location:</strong> Central Province</p>
       <p><strong>Importance:</strong> “Little England”</p>
       <p><strong>Details:</strong> Tea plantations, cool climate, colonial bungalows, and Gregory Lake make this a unique hill country escape.</p>
+      <a href="nuwaraeliya.html"><button>Read More</button></a>
     </div>
+
+    <div class="destination">
+      <img src="anuradhapura.jpg" alt="Anuradhapura">
+      <h3>Anuradhapura</h3>
+      <p><strong>Location:</strong> North Central Province</p>
+      <p><strong>Importance:</strong> Ancient capital of Sri Lanka</p>
+      <p><strong>Details:</strong> Home to centuries-old stupas, ruins, and the sacred Bodhi Tree – believed to be the oldest living tree recorded in history.</p>
+      <a href="anuradhapura.html"><button>Read More</button></a>
+    </div>
+
+    <div class="destination">
+      <img src="mirissa.jpg" alt="Mirissa Beach">
+      <h3>Mirissa</h3>
+      <p><strong>Location:</strong> Southern Coast</p>
+      <p><strong>Importance:</strong> Beach paradise and whale watching</p>
+      <p><strong>Details:</strong> Perfect tropical destination for surfing, whale watching and beach bars with golden sands and turquoise waters.</p>
+      <a href="mirissa.html"><button>Read More</button></a>
+    </div>
+
   </section>
 
   <section id="contact">
@@ -139,6 +210,19 @@
     t=d.getElementsByTagName("script")[0];
     t.parentNode.insertBefore(s,t);
   </script>
+
+  <div class="chat-widget">
+    <div class="chat-header">
+      <img src="paris.jpg" alt="Paris">
+      <strong>Welcome</strong>
+    </div>
+    <div class="chat-body">
+      Hello from Ceylon Wonder Toure! Do you need help planning your holiday?<br>We are 24/7 available to assist you.
+    </div>
+    <div class="chat-footer">
+      <input type="text" placeholder="Type your message and hit 'Enter'" />
+    </div>
+  </div>
 
 </body>
 </html> 
