@@ -15,25 +15,26 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Navigation Bar */
-/* Navigation Bar Window Style */
+/* Navigation Bar - Floating Window Style with Always Visible Links */
 nav {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  right: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  background: rgba(51, 51, 51, 0.8); /* semi-transparent */
-  backdrop-filter: blur(5px); /* modern blur effect */
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(51, 51, 51, 0.95);
+  backdrop-filter: blur(6px);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   z-index: 9999;
+  transition: top 0.3s;
 }
 
-.nav-left, .nav-right {
+.nav-left,
+.nav-right {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -45,6 +46,7 @@ nav a, .whatsapp-btn {
   padding: 8px 14px;
   font-weight: bold;
   transition: background-color 0.3s, transform 0.2s;
+  white-space: nowrap;
 }
 
 nav a:hover, .whatsapp-btn:hover {
@@ -53,9 +55,23 @@ nav a:hover, .whatsapp-btn:hover {
   transform: scale(1.05);
 }
 
+/* Force show all items even on small screens */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+
 
     .slideshow {
-      margin-top: 100px;
+      margin-top: 90px;
       position: relative;
       width: 100%;
       height: 450px;
@@ -259,6 +275,21 @@ nav a:hover, .whatsapp-btn:hover {
       window.open("https://wa.me/94763600611", "_blank");
     }
   </script>
+
+<script>
+  let prevScrollpos = window.pageYOffset;
+  const nav = document.querySelector("nav");
+
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      nav.style.top = "0";
+    } else {
+      nav.style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+  };
+</script>
 
   <!-- Tawk.to Live Chat -->
   <script type="text/javascript">
