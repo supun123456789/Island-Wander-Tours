@@ -6,68 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .chat-widget {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #fff;
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      font-family: sans-serif;
-      z-index: 9999;
-      transition: opacity 0.3s ease;
-    }
-    .chat-widget[style*="display: none"] {
-      opacity: 0;
-      pointer-events: none;
-    }
-    .chat-header {
-      background: #007bff;
-      color: white;
-      padding: 10px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
     .chat-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 10000;
-      border-radius: 50%;
-      overflow: hidden;
-      width: 60px;
-      height: 60px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.3);
-      background: white;
+      display: none; /* Hide old chat toggle */
     }
-    .chat-toggle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .chat-header img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-    }
-    .chat-body {
-      padding: 15px;
-      font-size: 14px;
-    }
-    .chat-footer {
-      padding: 10px;
-      border-top: 1px solid #ddd;
-    }
-    .chat-footer input {
-      width: 100%;
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+    .chat-widget {
+      display: none; /* Hide old chat widget */
     }
     .destination img {
       max-width: 100%;
@@ -214,81 +157,21 @@
     }
   </script>
 
-  <!-- Zoho SalesIQ -->
+  <!-- Zoho SalesIQ - removed, use Tawk.to instead -->
+
+  <!-- Tawk.to Live Chat Script -->
+  <!--Start of Tawk.to Script-->
   <script type="text/javascript">
-    var $zoho = $zoho || {};
-    $zoho.salesiq = $zoho.salesiq || {
-      widgetcode: "YOUR_UNIQUE_WIDGET_CODE_HERE",
-      values: {},
-      ready: function () {},
-    };
-    var d = document;
-    var s = d.createElement("script");
-    s.type = "text/javascript";
-    s.id = "zsiqscript";
-    s.defer = true;
-    s.src = "https://salesiq.zoho.com/widget";
-    var t = d.getElementsByTagName("script")[0];
-    t.parentNode.insertBefore(s, t);
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/689035d892f8b9191d317573/1j1pl4m9m';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
   </script>
 
-  <!-- Chat Toggle Button -->
-  <div class="chat-toggle" id="chatToggle">
-    <img src="paris.jpg" alt="Chat Icon" />
-  </div>
-
-  <!-- Chat Widget -->
-  <div class="chat-widget" id="chatBox" style="display: none;">
-    <div class="chat-header">
-      <img src="paris.jpg" alt="Paris" />
-      <strong>Welcome</strong>
-    </div>
-    <div class="chat-body">
-      Hello from ceylon Wonder Tours! Do you need help planning your holiday?<br />
-      We are 24/7 available to assist you.
-    </div>
-    <div class="chat-footer">
-      <input type="text" placeholder="Type your message and hit 'Enter'" />
-    </div>
-  </div>
-
-  <!-- Chat Script -->
-  <script>
-    const chatBox = document.getElementById("chatBox");
-    const chatToggle = document.getElementById("chatToggle");
-    let lastScrollY = window.scrollY;
-    let chatManuallyToggled = false;
-
-    // Auto-hide chat after 5 seconds on load
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        chatBox.style.display = "none";
-      }, 5000);
-    });
-
-    // Toggle chat manually
-    chatToggle.addEventListener("click", () => {
-      if (chatBox.style.display === "none" || chatBox.style.display === "") {
-        chatBox.style.display = "block";
-        chatManuallyToggled = true;
-      } else {
-        chatBox.style.display = "none";
-        chatManuallyToggled = false;
-      }
-    });
-
-    // Hide on scroll down, show on scroll up
-    window.addEventListener("scroll", () => {
-      const currentScrollY = window.scrollY;
-      if (!chatManuallyToggled) {
-        if (currentScrollY > lastScrollY) {
-          chatBox.style.display = "none";
-        } else {
-          chatBox.style.display = "block";
-        }
-      }
-      lastScrollY = currentScrollY;
-    });
-  </script>
 </body>
 </html>
