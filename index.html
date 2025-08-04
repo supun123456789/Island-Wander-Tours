@@ -2,41 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ceylon Wonder Tours - Sri Lanka</title>
+  <title>Ceylon Wonder Tours - Sri Lanka</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .chat-toggle {
-      display: none; /* Hide old chat toggle */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
-    .chat-widget {
-      display: none; /* Hide old chat widget */
+
+    .chat-toggle, .chat-widget {
+      display: none;
     }
+
+    /* Navigation Bar */
+    nav {
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a, .whatsapp-btn, .social-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover, .whatsapp-btn:hover, .social-links a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Slideshow */
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+      border: 6px solid #333;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      margin-top: 50; /* Removed 5cm spacing */
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .slideshow-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 40px;
+      font-size: 36px;
+      font-weight: bold;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+    }
+
     .destination img {
       max-width: 100%;
       border-radius: 10px;
     }
+
+    form input, form textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 5px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#tours">Tours</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#contact">Contact</a>
+      <button onclick="openWhatsApp()" class="whatsapp-btn">Chat on WhatsApp</button>
+    </div>
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://youtube.com" target="_blank">YouTube</a>
+      <a href="https://tiktok.com" target="_blank">TikTok</a>
+    </div>
+  </nav>
 
   <!-- Slideshow -->
   <div class="slideshow">
     <img class="slide" src="elephants.jpg" alt="Sri Lanka Elephants" />
     <img class="slide" src="sigiriya.jpg" alt="Sigiriya Rock Fortress" />
     <img class="slide" src="leopard.jpg" alt="Sri Lanka Leopard" />
-    <img class="slide" src="ella.jpg" alt="ella" />
+    <img class="slide" src="ella.jpg" alt="Ella" />
+    <div class="slideshow-title">Ceylon Wonder Tours - Sri Lanka</div>
   </div>
-
-  <!-- Navigation -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#tours">Tours</a>
-    <a href="#destinations">Destinations</a>
-    <a href="#contact">Contact</a>
-    <button onclick="openWhatsApp()" class="whatsapp-btn">Chat on WhatsApp</button>
-  </nav>
 
   <!-- Sections -->
   <section id="home">
@@ -58,7 +158,6 @@
     </ul>
   </section>
 
-  <!-- Famous Tourist Destinations -->
   <section id="destinations">
     <h2>Famous Tourist Destinations in Sri Lanka</h2>
 
@@ -157,20 +256,17 @@
     }
   </script>
 
-  <!-- Zoho SalesIQ - removed, use Tawk.to instead -->
-
-  <!-- Tawk.to Live Chat Script -->
-  <!--Start of Tawk.to Script-->
+  <!-- Tawk.to Live Chat -->
   <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/689035d892f8b9191d317573/1j1pl4m9m';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/689035d892f8b9191d317573/1j1pl4m9m';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
   </script>
 
 </body>
