@@ -5,50 +5,55 @@
   <title>Ceylon Wonder Tours - Sri Lanka</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
     }
 
-    .chat-toggle, .chat-widget {
-      display: none;
-    }
-
     /* Navigation Bar */
-    nav {
-      width: 100%;
-      background-color: #333;
-      position: relative;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      color: white;
-      z-index: 1000;
-    }
+/* Navigation Bar Window Style */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: rgba(51, 51, 51, 0.8); /* semi-transparent */
+  backdrop-filter: blur(5px); /* modern blur effect */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
 
-    .nav-links {
-      position: relative;
-      gap: 15px;
-    }
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-    nav a, .whatsapp-btn, .social-links a {
-      color: white;
-      text-decoration: none;
-      padding: 10px;
-      font-weight: bold;
-    }
+nav a, .whatsapp-btn {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
 
-    nav a:hover, .whatsapp-btn:hover, .social-links a:hover {
-      background-color: #555;
-      border-radius: 5px;
-    }
+nav a:hover, .whatsapp-btn:hover {
+  background-color: #555;
+  border-radius: 6px;
+  transform: scale(1.05);
+}
 
-    .social-links {
-      gap: 10px;
-    }
 
-    /* Slideshow */
     .slideshow {
       position: relative;
       width: 100%;
@@ -57,7 +62,6 @@
       border: 6px solid #333;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      margin-top: 50; /* Removed 5cm spacing */
     }
 
     .slide {
@@ -113,7 +117,7 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <div class="nav-links">
+    <div class="nav-left">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#tours">Tours</a>
@@ -121,10 +125,10 @@
       <a href="#contact">Contact</a>
       <button onclick="openWhatsApp()" class="whatsapp-btn">Chat on WhatsApp</button>
     </div>
-    <div class="social-links">
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-      <a href="https://youtube.com" target="_blank">YouTube</a>
-      <a href="https://tiktok.com" target="_blank">TikTok</a>
+    <div class="nav-right">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
   </nav>
 
